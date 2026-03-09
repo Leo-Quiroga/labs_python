@@ -66,3 +66,11 @@ resultados = {
 with open("ejercicio_Hemoglobina/hemoglobin_results.json", "w") as fh:# abre el archivo para escritura
     json.dump(resultados, fh, indent=2, ensure_ascii=False) # guarda los resultados en formato JSON con indentación para mejor legibilidad
 print("Datos guardados en hemoglobin_results.json")
+
+#Calcular aminiácidos hidrofóbicos
+aminoacidos_hidrofobicos = ["A", "I", "L", "M", "F", "W", "V"]  # Lista de aminoácidos hidrofóbicos
+conteo_hidrofobicos = sum(counts[aa] for aa in aminoacidos_hidrofobicos) # Suma el conteo de aminoácidos hidrofóbicos
+print(f"Cantidad de aminoácidos hidrofóbicos: {conteo_hidrofobicos}")
+#Calcular porcentaje de aminoácidos hidrofóbicos
+porcentaje_hidrofobicos = (conteo_hidrofobicos / len(aminoacidosList)) * 100 # Calcula el porcentaje de aminoácidos hidrofóbicos
+print(f"Porcentaje de aminoácidos hidrofóbicos: {porcentaje_hidrofobicos:.2f}%")
